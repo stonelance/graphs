@@ -1,0 +1,99 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "custom"
+        }
+    },
+    "inports": {
+        "source_srv": {
+            "process": "DrawFullscreenQuad_8iu23",
+            "port": "shaderresourceview",
+            "metadata": {
+                "x": 504,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "target_rtv": {
+            "process": "SetDrawOutput_o6m7m",
+            "port": "rendertargetview",
+            "metadata": {
+                "x": 504,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "material": {
+            "process": "DrawFullscreenQuad_8iu23",
+            "port": "material",
+            "metadata": {
+                "x": 504,
+                "y": 468,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "entrypoint": {
+            "process": "DrawFullscreenQuad_8iu23",
+            "port": "entrypoint",
+            "metadata": {
+                "x": 504,
+                "y": 576,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "outports": {
+        "completion": {
+            "process": "DrawFullscreenQuad_8iu23",
+            "port": "completion",
+            "metadata": {
+                "x": 972,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "groups": [],
+    "processes": {
+        "DrawFullscreenQuad_8iu23": {
+            "component": "DrawFullscreenQuad",
+            "metadata": {
+                "label": "DrawFullscreenQuad",
+                "x": 828,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "SetDrawOutput_o6m7m": {
+            "component": "SetDrawOutput",
+            "metadata": {
+                "label": "SetDrawOutput",
+                "x": 674.4159276585334,
+                "y": 258.59548361216406,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "SetDrawOutput_o6m7m",
+                "port": "completion"
+            },
+            "tgt": {
+                "process": "DrawFullscreenQuad_8iu23",
+                "port": "trigger"
+            },
+            "metadata": {}
+        }
+    ]
+}
